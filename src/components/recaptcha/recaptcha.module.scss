@@ -1,0 +1,14 @@
+.errorBox {
+  padding: 8px 7px 12px;
+  outline: 1px solid #f00;
+}
+
+.recaptcha {
+  &:not(:last-child) {
+    margin-bottom: 13px;
+  }
+}
+
+.error {
+  color: #f00;
+}

@@ -1,0 +1,90 @@
+.large {
+  font-size: var(--font-size-xxl);
+  line-height: var(--line-height-m);
+  font-weight: 600;
+}
+
+.h1 {
+  font-size: var(--font-size-xl);
+  line-height: 36px; // --line-height-l = 36px
+  font-weight: var(--font-weight-bold);
+}
+
+.h2 {
+  font-size: 1.125rem; // Добавляем недостающий --font-size-l
+  line-height: var(--line-height-s);
+  font-weight: var(--font-weight-bold);
+}
+
+.h3 {
+  font-size: var(--font-size-m);
+  line-height: var(--line-height-l);
+  font-weight: 600;
+}
+
+.regular_text_16 {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+}
+
+.bold_text_16 {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: var(--font-weight-bold);
+}
+
+.regular_text_14 {
+  font-size: var(--font-size-s);
+  line-height: 24px; // Добавляем --line-height-xl
+  font-weight: var(--font-weight-regular);
+}
+
+.medium_text_14 {
+  font-size: var(--font-size-s);
+  line-height: 24px;
+  font-weight: 500; // Добавляем medium
+}
+
+.bold_text_14 {
+  font-size: var(--font-size-s);
+  line-height: 24px;
+  font-weight: var(--font-weight-bold);
+}
+
+.small_text {
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-s);
+  font-weight: var(--font-weight-regular);
+}
+
+.semi-bold_small_text {
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-s);
+  font-weight: 600;
+}
+
+.regular_link {
+  font-size: var(--font-size-s);
+  line-height: 24px;
+  font-weight: var(--font-weight-regular);
+  cursor: pointer;
+  color: var(--color-primary-500);
+  text-decoration: underline;
+}
+
+.small_link {
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-s);
+  font-weight: var(--font-weight-regular);
+  cursor: pointer;
+  color: var(--color-primary-500);
+  text-decoration: underline;
+}
+
+.error {
+  font-size: var(--font-size-s);
+  line-height: 24px;
+  font-weight: var(--font-weight-regular);
+  color: var(--color-danger-500);
+}

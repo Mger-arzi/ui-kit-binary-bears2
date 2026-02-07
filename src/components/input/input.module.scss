@@ -1,0 +1,134 @@
+.root {
+  width: 100%;
+}
+
+.label {
+  font-size: var(--font-size-s);
+  line-height: var(--line-height-m);
+  color: var(--color-light-900);
+
+  .disabled & {
+    color: var(--color-dark-100);
+  }
+}
+
+.errorMessage {
+  font-size: var(--font-size-s);
+  line-height: var(--line-height-m);
+  color: var(--color-danger-500);
+}
+
+.inputWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  padding: 6px 12px;
+
+  line-height: var(--line-height-m);
+  color: var(--color-light-900);
+
+  background-color: transparent;
+
+  border: 1px solid var(--color-dark-100);
+  border-radius: 2px;
+  outline: none;
+
+  &::placeholder {
+    color: var(--color-light-900);
+  }
+
+  &.withEyeIcon {
+    padding-right: 40px;
+  }
+
+  &[type='search'] {
+    padding-left: 41px;
+  }
+
+  &:hover {
+    border-color: var(--color-light-900);
+  }
+
+  &:focus {
+    border-color: var(--color-primary-500);
+  }
+
+  &:active {
+    border-color: var(--color-light-100);
+    background-color: var(--color-dark-500);
+    color: var(--color-light-100);
+
+    &::placeholder {
+      color: transparent;
+    }
+  }
+
+  &.error {
+    color: var(--color-light-100);
+    border-color: var(--color-danger-500);
+  }
+
+  &:disabled {
+    color: var(--color-dark-100);
+    border-color: var(--color-dark-100);
+    cursor: not-allowed;
+
+    &::placeholder {
+      color: var(--color-dark-100);
+    }
+  }
+
+  &::selection {
+    background-color: var(--color-dark-500);
+    color: var(--color-light-100);
+  }
+}
+
+.searchIcon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+
+  width: 20px;
+  height: 20px;
+
+  color: var(--color-light-900);
+
+  .input:active ~ & {
+    color: var(--color-light-100);
+  }
+
+  .input.error ~ & {
+    color: var(--color-light-100);
+  }
+
+  .input:disabled ~ & {
+    color: var(--color-dark-100);
+    cursor: not-allowed;
+  }
+}
+
+.eyeButton {
+  all: unset;
+
+  cursor: pointer;
+
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+
+  width: 24px;
+  height: 24px;
+
+  color: var(--color-light-100);
+
+  .disabled & {
+    color: var(--color-dark-100);
+    cursor: not-allowed;
+  }
+}

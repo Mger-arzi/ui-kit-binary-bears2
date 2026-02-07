@@ -1,0 +1,1 @@
+export { ScrollAreaBase, Scrollbar, type ScrollbarProps } from './Scroll'

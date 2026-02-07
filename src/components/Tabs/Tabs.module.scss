@@ -1,0 +1,110 @@
+.tabsHeader {
+  display: flex;
+  width: 100%;
+}
+
+.tabButton {
+  position: relative;
+  width: 100%;
+  height: 36px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-family-primary);
+  font-size: 16px;
+  font-weight: 600;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* слой фона */
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: transparent;
+    opacity: 0.15;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  /* underline — ВСЕГДА */
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: currentColor;
+    z-index: 1;
+  }
+
+  .label {
+    position: relative;
+    z-index: 2;
+  }
+
+  /* ACTIVE */
+  &[data-state='active']::before {
+    background: var(--bg-active);
+  }
+
+  /* HOVER */
+  &:not(:disabled):not([data-state='active']):hover::before {
+    background: var(--bg-hover);
+  }
+
+  /* FOCUS */
+  &:focus-visible {
+    outline: 2px solid rgba(47, 104, 204, 1);
+    outline-offset: 2px;
+
+    &::before {
+      background: transparent;
+    }
+  }
+
+  /* DISABLED — НИКАКОГО ФОНА */
+  &:disabled::before {
+    background: transparent;
+  }
+
+  &:disabled {
+    cursor: default;
+  }
+}
+
+/* ===== VARIANTS ===== */
+
+.primary {
+  color: rgba(57, 125, 246, 1);
+  --bg-active: rgba(115, 165, 255, 1);
+  --bg-hover: rgba(35, 78, 153, 1);
+
+  &:disabled {
+    color: rgba(35, 78, 153, 1);
+  }
+}
+
+.secondary {
+  color: rgba(76, 76, 76, 1);
+  --bg-active: rgba(115, 165, 255, 1);
+  --bg-hover: rgba(35, 78, 153, 1);
+
+  &:disabled {
+    color: rgba(76, 76, 76, 1);
+  }
+}
+
+/* ===== CONTENT ===== */
+
+.content {
+  margin-top: 16px;
+  padding: 16px;
+  border: 1px solid rgba(57, 125, 246, 0.2);
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.05);
+}
