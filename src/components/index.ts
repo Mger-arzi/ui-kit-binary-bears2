@@ -1,6 +1,6 @@
 export * from './button'
 export * from './input'
-// export * from './modal'
+export * from './modal'
 export * from './select'
 export * from './Cards'
 export * from './Scroll'
