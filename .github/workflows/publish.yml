@@ -1,31 +1,30 @@
-name: Publish to NPM
+name: Publish to npm
+
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
+
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [20]
+    
     steps:
       - uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 8
-      - name: Use Node.js ${{ matrix.node-version }}
+      
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'pnpm'
+          node-version: '18'
+          registry-url: 'https://registry.npmjs.org'
+      
       - name: Install dependencies
-        run: pnpm install --no-frozen-lockfile
-      - name: Build lib
-        run: pnpm run build
-      - name: Build lib
-        run: pnpm run build
-      - uses: JS-DevTools/npm-publish@v3
+        run: npm ci
+      
+      - name: Build
+        run: npm run build
+      
+      - name: Publish to npm
+        uses: JS-DevTools/npm-publish@v3
         with:
           token: ${{ secrets.NPM_TOKEN }}
           access: 'public'
