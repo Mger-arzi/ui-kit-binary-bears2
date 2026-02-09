@@ -1,18 +1,25 @@
 {
-  "name": "@mger99/ui_kit_binary_bears",
-  "private": false,
+  "name": "@mger/ui_kit_binary_bears",
   "version": "0.0.3",
+  "private": false,
+  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
+  "homepage": "https://github.com/Mger-arzi/ui-kit-binary-bears2#readme",
+  "bugs": {
+    "url": "https://github.com/Mger-arzi/ui-kit-binary-bears2/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mger-arzi/ui-kit-binary-bears2.git"
+  },
+  "license": "ISC",
+  "author": "",
   "type": "module",
   "main": "dist/index.js",
-  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist",
     "dist/index.css"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b --clean && vite build && tsc -b",
@@ -73,5 +80,9 @@
     "vite": "^7.2.4",
     "vite-plugin-dts": "^4.5.4",
     "vitest": "^4.0.16"
-  }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "module": "dist/index.js"
 }
