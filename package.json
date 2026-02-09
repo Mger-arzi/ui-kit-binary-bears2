@@ -10,6 +10,9 @@
     "dist",
     "dist/index.css"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b --clean && vite build && tsc -b",
