@@ -1,6 +1,6 @@
 {
   "name": "@mger/ui_kit_binary_bears",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "private": false,
   "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
   "homepage": "https://github.com/Mger-arzi/ui-kit-binary-bears#readme",
